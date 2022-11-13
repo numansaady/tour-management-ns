@@ -7,6 +7,16 @@ const dbConnect = require('./utils/dbConnect');
 // Database Connection
 dbConnect();
 
+app.use(errorHandler)
+
 app.listen(port, ()=> {
     console.log(`Server is listening the port ${port}`.red.bold)
 })
+
+// server error handler
+// process.on("unhandledRejection", (error)=>{
+//     console.log(error.name, error.message);
+//     app.close(()=>{
+//         process.exit(1);
+//     })
+// })

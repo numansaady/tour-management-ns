@@ -15,7 +15,7 @@ app.get('/', (req, res)=> {
 
 
 // 404 Not found
-app.get('*', (req, res)=> {
+app.all('*', (req, res)=> {
     res.status(404).send({message : "Route not found....!"})
 })
 
