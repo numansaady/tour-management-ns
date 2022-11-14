@@ -5,13 +5,13 @@ const tourSchema = mongoose.Schema(
   {
     name: {
       type: String,
-      required: [true, "Tour Name is Required..!"],
+      required: [true, "Packege Name is Required..!"],
       trim: true,
     },
 
     description: {
       type: String,
-      minLength: [50, "Please Describe about the Tour"],
+      minLength: [50, "Description must be more than 50 character"],
       required: [true, "Tour Description is Required..!"],
       trim: true,
     },
@@ -30,7 +30,7 @@ const tourSchema = mongoose.Schema(
     destination: {
       type: String,
       required: [true, "Tour Destination is Required..!"],
-      minLength: [3, "Enter a valid Destination..!"],
+      minLength: [3, "Must be more than 3 character, Enter a valid Destination..!"],
       trim: true,
     },
 

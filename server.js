@@ -2,6 +2,7 @@ const dotenv = require('dotenv').config();
 const colors = require('colors');
 const port = process.env.PORT || 4000;
 const app = require('./app');
+const errorHandler = require('./middleware/errorHandler');
 const dbConnect = require('./utils/dbConnect');
 
 // Database Connection
