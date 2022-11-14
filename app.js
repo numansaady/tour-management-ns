@@ -8,6 +8,10 @@ const mongoose = require('mongoose');
 app.use(express.json());
 app.use(cors());
 
+// Routes
+app.use("/tours", toursRoute);
+app.use("/tour", tourRoute);
+
 // Default route
 app.get('/', (req, res)=> {
     res.send('Route is working...!')
